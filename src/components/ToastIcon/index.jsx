@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyledToastIcon } from './styled'
+import svg from '../../assets/svg/info.svg'
 
-export default ToastIcon = () => {
-	return <StyledToastIcon>ToastIcon</StyledToastIcon>
+export const ToastIcon = () => {
+	return <StyledToastIcon src={svg} />
 }

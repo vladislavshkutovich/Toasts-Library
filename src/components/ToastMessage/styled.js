@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledToastMessage = styled.p`
-	background-color: #a2a2a2;
-	border: 3px solid red;
+	margin-left: 10px;
+	margin-right: auto;
+	font-size: 22px;
 `

@@ -4,6 +4,10 @@ import { babel } from '@rollup/plugin-babel'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
 import generatePackageJson from 'rollup-plugin-generate-package-json'
+import alias from 'rollup-plugin-alias'
+import path from 'path'
+
+const root = path.resolve(__dirname)
 
 export default {
 	input: 'src/main.js',
@@ -22,6 +26,15 @@ export default {
 		url(),
 		svgr(),
 		commonjs(),
+		alias({
+			resolve: ['*', '.js', '.jsx'],
+			entries: [
+				{
+					find: '@',
+					replacement: path.resolve(root, './src'),
+				},
+			],
+		}),
 		generatePackageJson({
 			outputFolder: 'dist',
 			baseContents: (el) => ({

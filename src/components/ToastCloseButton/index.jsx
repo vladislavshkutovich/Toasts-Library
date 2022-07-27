@@ -1,8 +1,11 @@
 import React from 'react'
 import { StyledCloseButton } from './styled'
+import svg from '../../assets/svg/cross.svg'
 
-export default ToastCloseButton = () => {
+export const ToastCloseButton = () => {
 	return (
-		<StyledCloseButton>ToastCloseButton</StyledCloseButton>
+		<StyledCloseButton>
+			<img src={svg} />
+		</StyledCloseButton>
 	)
 }

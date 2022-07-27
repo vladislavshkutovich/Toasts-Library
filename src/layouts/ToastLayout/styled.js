@@ -1,16 +1,27 @@
 import styled from 'styled-components'
 
 export const StyledToastLayout = styled.div`
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
 	display: flex;
 	flex-direction: row;
-	align-items: left;
+	justify-content: left;
+	justify-items: center;
 
-	width: 600px;
-	min-width: 300px;
-	height: 240px;
-	min-height: 150px;
-	padding: 32px;
+	width: 400px;
+	height: 60px;
+	padding: 15px;
 	margin: 10px;
-	background-color: #b1b1b1;
-	border-radius: 8px;
+	background-color: #9a40d3;
+	border-radius: 16px;
+
+	& > * {
+		display: flex;
+		align-items: center;
+	}
 `

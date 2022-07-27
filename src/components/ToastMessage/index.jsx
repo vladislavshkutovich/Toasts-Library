@@ -1,8 +1,10 @@
 import React from 'react'
 import { StyledToastMessage } from './styled'
 
-export default ToastMessage = () => {
+export const ToastMessage = () => {
 	return (
-		<StyledToastMessage>ToastMessage</StyledToastMessage>
+		<StyledToastMessage>
+			Info Toast Example
+		</StyledToastMessage>
 	)
 }

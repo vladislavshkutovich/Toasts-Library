@@ -1,6 +1,6 @@
 import React from 'react'
-import { ToastLayout } from './styled'
+import { StyledToastLayout } from './styled'
 
-export default ToastLayout = ({ children }) => {
+export const ToastLayout = ({ children }) => {
 	return <StyledToastLayout>{children}</StyledToastLayout>
 }
