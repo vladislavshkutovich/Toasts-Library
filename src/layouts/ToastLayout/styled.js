@@ -1,7 +1,41 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const fromTopAnimation = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`
+const fromBottomAnimation = keyframes`
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`
 
 export const StyledToastLayout = styled.div`
-	* {
+	position: relative;
+	overflow: hidden;
+	width: ${({ size }) => size.width};
+	height: ${({ size }) => size.height};
+	padding: ${({ size }) => size.padding};
+	margin-bottom: 15px;
+	border-radius: 20px;
+	background-color: ${({ backgroundColor }) =>
+		backgroundColor};
+	font-size: ${({ size }) => size.fontSize};
+	animation: ${({ toastAnimation }) =>
+			toastAnimation == 'from-top'
+				? fromTopAnimation
+				: fromBottomAnimation}
+		1s;
+
+	// Backup
+	/* * {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -23,5 +57,5 @@ export const StyledToastLayout = styled.div`
 	& > * {
 		display: flex;
 		align-items: center;
-	}
+	} */
 `

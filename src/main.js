@@ -1,6 +1,3 @@
-// import App from './App'
-// export { App }
-
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Toast from '@/components/Toast'

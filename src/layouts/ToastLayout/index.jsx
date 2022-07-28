@@ -1,6 +1,20 @@
 import React from 'react'
 import { StyledToastLayout } from './styled'
 
-export const ToastLayout = ({ children }) => {
-	return <StyledToastLayout>{children}</StyledToastLayout>
+export const ToastLayout = ({
+	key,
+	backgroundColor,
+	size,
+	toastAnimation,
+	children,
+}) => {
+	return (
+		<StyledToastLayout
+			key={key}
+			backgroundColor={backgroundColor}
+			size={TOAST_SIZE[size]}
+			toastAnimation={toastAnimation}>
+			{children}
+		</StyledToastLayout>
+	)
 }
