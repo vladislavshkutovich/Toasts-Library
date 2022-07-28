@@ -22,6 +22,7 @@ class ToastService {
 	}
 
 	generateToast = (toastOptions) => {
+		// ! здесь разметку возвращать нельзя
 		return {
 			id: uuid(),
 			...toastOptions,

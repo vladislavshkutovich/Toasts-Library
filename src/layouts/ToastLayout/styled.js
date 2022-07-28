@@ -18,16 +18,18 @@ const fromBottomAnimation = keyframes`
 `
 
 export const StyledToastLayout = styled.div`
+	display: flex;
 	position: relative;
 	overflow: hidden;
-	width: ${({ size }) => size.width};
-	height: ${({ size }) => size.height};
-	padding: ${({ size }) => size.padding};
+	width: ${({ size }) => size?.width || '350px'};
+	height: ${({ size }) => size?.height || '70px'};
+	padding: ${({ size }) => size?.padding || '15px'};
 	margin-bottom: 15px;
 	border-radius: 20px;
 	background-color: ${({ backgroundColor }) =>
-		backgroundColor};
-	font-size: ${({ size }) => size.fontSize};
+		backgroundColor || '#9A40D3'};
+	font-family: sans-serif;
+	font-size: ${({ size }) => size?.fontSize || '20px'};
 	animation: ${({ toastAnimation }) =>
 			toastAnimation == 'from-top'
 				? fromTopAnimation

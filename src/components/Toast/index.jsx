@@ -32,7 +32,11 @@ export const Toast = ({
 				src={close}
 				size={TOAST_SIZE[size]}
 			/>
-			<ToastIcon src={icon} size={TOAST_SIZE[size]} />
+			<ToastIcon
+				src={icon}
+				size={TOAST_SIZE[size]}
+				alt="#"
+			/>
 			<ToastMessage color={titleColor} title={title} />
 		</ToastLayout>
 	)

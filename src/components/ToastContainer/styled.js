@@ -8,8 +8,10 @@ export const ToastCard = styled.div`
 	position: fixed;
 	top: ${({ position }) =>
 		position.top || positionDefault(position)};
-	bottom: ${({ position }) => position.bottom};
+	bottom: ${({ position }) =>
+		position.bottom || positionDefault(position)};
 	left: ${({ position }) =>
 		position.left || positionDefault(position)};
-	right: ${({ position }) => position.rigth};
+	right: ${({ position }) =>
+		position.rigth || positionDefault(position)};
 `

@@ -8,5 +8,5 @@ export const StyledToastMessage = styled.p`
 	display: flex;
 	align-items: center;
 	margin-left: 15px;
-	color: ${(props) => props.color};
+	color: ${(props) => props.color || '#FFFFFF'};
 `
