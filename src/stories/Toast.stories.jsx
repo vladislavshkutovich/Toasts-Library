@@ -1,4 +1,5 @@
 import { Toast } from '../components/Toast'
+import { TestingToastsComponent } from '../components/TestingToastsComponent'
 
 export default {
 	title: 'Toast',
@@ -64,7 +65,7 @@ export const ToastStory = ({
 	toastAnimation,
 }) => {
 	{
-		return Toast(
+		return TestingToastsComponent(
 			toastType,
 			toastPosition,
 			size,
@@ -74,4 +75,16 @@ export const ToastStory = ({
 			toastAnimation,
 		)
 	}
+
+	// {
+	// 	return Toast(
+	// 		toastType,
+	// 		toastPosition,
+	// 		size,
+	// 		title,
+	// 		titleColor,
+	// 		backgroundColor,
+	// 		toastAnimation,
+	// 	)
+	// }
 }
