@@ -28,7 +28,7 @@ export const StyledToastLayout = styled.div`
 	border-radius: 20px;
 	background-color: ${({ backgroundColor }) =>
 		backgroundColor || '#9A40D3'};
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: ${({ size }) => size?.fontSize || '20px'};
 	animation: ${({ toastAnimation }) =>
 			toastAnimation == 'from-top'

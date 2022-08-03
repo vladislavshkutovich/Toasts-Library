@@ -3,6 +3,7 @@ import infoIcon from '../assets/svg/info.svg'
 import successIcon from '../assets/svg/success.svg'
 import warningIcon from '../assets/svg/warning.svg'
 import closeIcon from '../assets/svg/cross.svg'
+import closeIconBlack from '../assets/svg/crossBlack.svg'
 
 export const INFO_TOAST = {
 	TITLE: 'Info Toast Example',
@@ -16,7 +17,7 @@ export const WARNING_TOAST = {
 	TITLE: 'Warning Toast Example',
 	TYPE: 'warning',
 	ICON: warningIcon,
-	CLOSE: closeIcon,
+	CLOSE: closeIconBlack,
 	BACKGROUND_COLOR: '#F4E048',
 	COLOR: '#000000',
 }

@@ -6,7 +6,7 @@ export default {
 	argTypes: {
 		toastType: {
 			options: ['error', 'warning', 'success', 'info'],
-			defaultValue: 'success',
+			defaultValue: 'info',
 			control: {
 				type: 'radio',
 			},

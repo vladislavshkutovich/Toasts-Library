@@ -1,6 +1,17 @@
+import { v4 as uuid } from 'uuid'
+import {
+	updateToastsList,
+	renderToasts,
+} from '../../helpers'
+import { ToastsList } from '../ToastsList'
+
 class ToastService {
 	constructor() {
 		this.toasts = []
+	}
+
+	setContainer() {
+		this.container = document.getElementById('container')
 	}
 
 	getAllToasts = () => {
@@ -19,13 +30,39 @@ class ToastService {
 		this.toasts = this.toasts.filter(
 			(toast) => toast.id !== toastId,
 		)
+		renderToasts(ToastsList(this.toasts), this.container)
 	}
 
-	generateToast = (toastOptions) => {
-		// ! здесь разметку возвращать нельзя
-		return {
-			id: uuid(),
-			...toastOptions,
-		}
+	generateToast = (...toastOptions) => {
+		const [
+			toastType,
+			size,
+			title,
+			titleColor,
+			backgroundColor,
+			toastAnimation,
+		] = toastOptions
+		const id = uuid()
+
+		this.toasts = updateToastsList(
+			this.toasts,
+			toastType,
+			id,
+			size,
+			title,
+			titleColor,
+			backgroundColor,
+			toastAnimation,
+		)
+
+		renderToasts(ToastsList(this.toasts), this.container)
+
+		// return {
+		// 	id: uuid(),
+		// 	...toastOptions,
+		// }
 	}
 }
+
+const toast = new ToastService()
+export default toast

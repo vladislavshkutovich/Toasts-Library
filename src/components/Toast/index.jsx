@@ -24,6 +24,7 @@ export const Toast = ({
 	return (
 		<ToastLayout
 			key={id}
+			id={id}
 			backgroundColor={backgroundColor}
 			size={TOAST_SIZE[size]}
 			toastAnimation={toastAnimation}>

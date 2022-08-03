@@ -5,7 +5,7 @@ import { TOAST_SIZE } from '../../constants'
 // todo прокинуть дефолтные значения чтобы посмотреть как выглядит
 // todo здесь и в других компонентах
 export const ToastLayout = ({
-	key,
+	id,
 	backgroundColor,
 	size,
 	toastAnimation,
@@ -13,7 +13,7 @@ export const ToastLayout = ({
 }) => {
 	return (
 		<StyledToastLayout
-			key={key}
+			id={id}
 			backgroundColor={backgroundColor}
 			size={TOAST_SIZE[size]}
 			toastAnimation={toastAnimation}>
