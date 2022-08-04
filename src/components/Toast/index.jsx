@@ -38,7 +38,11 @@ export const Toast = ({
 				size={TOAST_SIZE[size]}
 				alt="#"
 			/>
-			<ToastMessage color={titleColor} title={title} />
+			<ToastMessage
+				color={titleColor}
+				title={title}
+				size={TOAST_SIZE[size]}
+			/>
 		</ToastLayout>
 	)
 }

@@ -6,6 +6,10 @@ const positionDefault = (position) => {
 
 export const ToastCard = styled.div`
 	position: fixed;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-end;
 	top: ${({ position }) =>
 		position.top || positionDefault(position)};
 	bottom: ${({ position }) =>

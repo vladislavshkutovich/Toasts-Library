@@ -59,27 +59,27 @@ export const TOAST_POSITIONS = {
 
 export const TOAST_SIZE = {
 	['small']: {
-		width: '300px',
-		height: '60px',
+		width: '280px',
+		height: '55px',
 		padding: '10px',
-		fontSize: '18px',
+		fontSize: '16px',
 		widthClose: '15px',
 		widthSvg: '35px',
 	},
 	['medium']: {
-		width: '350px',
-		height: '70px',
+		width: '320px',
+		height: '65px',
 		padding: '15px',
-		fontSize: '20px',
+		fontSize: '18px',
 		widthClose: '20px',
-		widthSvg: '40px',
+		widthSvg: '45px',
 	},
 	['large']: {
-		width: '400px',
-		height: '80px',
+		width: '380px',
+		height: '75px',
 		padding: '20px',
-		fontSize: '22px',
+		fontSize: '20px',
 		widthClose: '25px',
-		widthSvg: '45px',
+		widthSvg: '55px',
 	},
 }

@@ -4,8 +4,9 @@ import { StyledToastMessage } from './styled'
 export const ToastMessage = ({
 	color = '#FFFFFF',
 	title = 'Info Toast Example',
+	size,
 }) => (
-	<StyledToastMessage color={color}>
+	<StyledToastMessage color={color} size={size}>
 		{title}
 	</StyledToastMessage>
 )

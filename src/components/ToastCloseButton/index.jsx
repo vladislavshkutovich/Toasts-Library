@@ -7,20 +7,16 @@ import toast from '../ToastService'
 export const ToastCloseButton = ({
 	id = '1',
 	src = svgByDefault,
-	size = '20px',
+	size,
 }) => {
+	console.log(size)
 	const deleteToast = (e) => {
 		toast.removeToast(e.target.id)
 	}
 
 	return (
-		<StyledCloseButton>
-			<img
-				src={src}
-				id={id}
-				size={TOAST_SIZE[size]}
-				onClick={deleteToast}
-			/>
+		<StyledCloseButton size={size}>
+			<img src={src} id={id} onClick={deleteToast} />
 		</StyledCloseButton>
 	)
 }
