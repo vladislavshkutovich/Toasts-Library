@@ -1,10 +1,8 @@
 import { Toast } from '../Toast'
 
 export const ToastsList = (toasts) => {
-	console.log(toasts)
 	return toasts.map((el) => {
-		// Short circuting with "OR" operator for custom settings from user
-		console.log(el)
+		// Short circuiting with "OR" operator for custom settings from user
 		return (
 			<Toast
 				key={el.id}

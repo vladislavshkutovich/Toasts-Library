@@ -56,11 +56,6 @@ class ToastService {
 		)
 
 		renderToasts(ToastsList(this.toasts), this.container)
-
-		// return {
-		// 	id: uuid(),
-		// 	...toastOptions,
-		// }
 	}
 }
 

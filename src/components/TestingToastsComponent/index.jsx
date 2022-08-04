@@ -2,6 +2,7 @@ import React from 'react'
 import { ToastContainer } from '../ToastContainer'
 import { AddToastButton } from './styled'
 import toast from '../ToastService'
+import PropTypes from 'prop-types'
 
 export const TestingToastsComponent = (
 	toastType,
@@ -29,25 +30,17 @@ export const TestingToastsComponent = (
 			<AddToastButton onClick={handleToast}>
 				Add Toast
 			</AddToastButton>
-			<ToastContainer position={toastPosition} />
+			<ToastContainer toastPosition={toastPosition} />
 		</div>
 	)
 }
 
-/*
-  import React from 'react';
-
-  import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-  
-  function App(){
-    const notify = () => toast("Wow so easy!");
-
-    return (
-      <div>
-        <button onClick={notify}>Notify!</button>
-        <ToastContainer />
-      </div>
-    );
-  }
-*/
+TestingToastsComponent.propTypes = {
+	toastType: PropTypes.string.isRequired,
+	toastPosition: PropTypes.object.isRequired,
+	size: PropTypes.object.isRequired,
+	title: PropTypes.string,
+	titleColor: PropTypes.string,
+	backgroundColor: PropTypes.string,
+	toastAnimation: PropTypes.string.isRequired,
+}

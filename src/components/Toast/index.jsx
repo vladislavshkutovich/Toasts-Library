@@ -1,15 +1,11 @@
 import React from 'react'
 
-// import { ToastLayout } from '@/layouts/ToastLayout'
-// import { ToastIcon } from '@/components/ToastIcon'
-// import { ToastMessage } from '@/components/ToastMessage'
-// import { ToastCloseButton } from '@/components/ToastCloseButton'
-
 import { ToastLayout } from '../../layouts/ToastLayout'
 import { ToastIcon } from '../ToastIcon'
 import { ToastMessage } from '../ToastMessage'
 import { ToastCloseButton } from '../ToastCloseButton'
 import { TOAST_SIZE } from '../../constants'
+import PropTypes from 'prop-types'
 
 export const Toast = ({
 	id,
@@ -45,4 +41,15 @@ export const Toast = ({
 			/>
 		</ToastLayout>
 	)
+}
+
+Toast.propTypes = {
+	id: PropTypes.string.isRequired,
+	icon: PropTypes.string.isRequired,
+	size: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	close: PropTypes.string.isRequired,
+	titleColor: PropTypes.string,
+	toastAnimation: PropTypes.string.isRequired,
+	backgroundColor: PropTypes.string,
 }

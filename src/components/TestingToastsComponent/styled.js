@@ -7,7 +7,7 @@ export const AddToastButton = styled.button`
 	border-radius: 8px;
 	font-size: 16px;
 	left: 45%;
-	top: 40%;
+	top: 50%;
 	background-color: #e1ff75;
 	cursor: pointer;
 

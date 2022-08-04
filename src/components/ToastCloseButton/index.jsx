@@ -1,15 +1,9 @@
 import React from 'react'
 import { StyledCloseButton } from './styled'
-import { TOAST_SIZE } from '../../constants'
-import svgByDefault from '../../assets/svg/cross.svg'
 import toast from '../ToastService'
+import PropTypes from 'prop-types'
 
-export const ToastCloseButton = ({
-	id = '1',
-	src = svgByDefault,
-	size,
-}) => {
-	console.log(size)
+export const ToastCloseButton = ({ id, src, size }) => {
 	const deleteToast = (e) => {
 		toast.removeToast(e.target.id)
 	}
@@ -19,4 +13,10 @@ export const ToastCloseButton = ({
 			<img src={src} id={id} onClick={deleteToast} />
 		</StyledCloseButton>
 	)
+}
+
+ToastCloseButton.propTypes = {
+	id: PropTypes.string.isRequired,
+	src: PropTypes.string.isRequired,
+	size: PropTypes.object.isRequired,
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyledToastLayout } from './styled'
-import { TOAST_SIZE } from '../../constants'
 
 export const ToastLayout = ({
 	id,

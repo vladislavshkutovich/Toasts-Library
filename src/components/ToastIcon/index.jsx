@@ -1,10 +1,12 @@
 import React from 'react'
 import { StyledToastIcon } from './styled'
-import svgByDefault from '../../assets/svg/info.svg'
+import PropTypes from 'prop-types'
 
-export const ToastIcon = ({
-	src = svgByDefault,
-	size = '40px',
-}) => {
+export const ToastIcon = ({ src, size }) => {
 	return <StyledToastIcon size={size} src={src} />
+}
+
+ToastIcon.propTypes = {
+	src: PropTypes.string.isRequired,
+	size: PropTypes.object.isRequired,
 }
