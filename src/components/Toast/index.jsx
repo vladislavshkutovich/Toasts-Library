@@ -4,6 +4,7 @@ import { ToastLayout } from '../../layouts/ToastLayout'
 import { ToastIcon } from '../ToastIcon'
 import { ToastMessage } from '../ToastMessage'
 import { ToastCloseButton } from '../ToastCloseButton'
+import { ErrorBoundary } from '../ErrorBoundary'
 import { TOAST_SIZE } from '../../constants'
 import PropTypes from 'prop-types'
 
@@ -16,30 +17,34 @@ export const Toast = ({
 	titleColor,
 	toastAnimation,
 	backgroundColor,
+	autoCloseTimeout,
 }) => {
 	return (
-		<ToastLayout
-			key={id}
-			id={id}
-			backgroundColor={backgroundColor}
-			size={TOAST_SIZE[size]}
-			toastAnimation={toastAnimation}>
-			<ToastCloseButton
+		<ErrorBoundary>
+			<ToastLayout
+				key={id}
 				id={id}
-				src={close}
+				backgroundColor={backgroundColor}
 				size={TOAST_SIZE[size]}
-			/>
-			<ToastIcon
-				src={icon}
-				size={TOAST_SIZE[size]}
-				alt="#"
-			/>
-			<ToastMessage
-				color={titleColor}
-				title={title}
-				size={TOAST_SIZE[size]}
-			/>
-		</ToastLayout>
+				toastAnimation={toastAnimation}>
+				<ToastCloseButton
+					id={id}
+					src={close}
+					size={TOAST_SIZE[size]}
+					autoCloseTimeout={autoCloseTimeout}
+				/>
+				<ToastIcon
+					src={icon}
+					size={TOAST_SIZE[size]}
+					alt="#"
+				/>
+				<ToastMessage
+					color={titleColor}
+					title={title}
+					size={TOAST_SIZE[size]}
+				/>
+			</ToastLayout>
+		</ErrorBoundary>
 	)
 }
 
@@ -52,4 +57,5 @@ Toast.propTypes = {
 	titleColor: PropTypes.string,
 	toastAnimation: PropTypes.string.isRequired,
 	backgroundColor: PropTypes.string,
+	autoCloseTimeout: PropTypes.func,
 }

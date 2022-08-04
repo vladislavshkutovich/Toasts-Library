@@ -14,25 +14,6 @@ class ToastService {
 		this.container = document.getElementById('container')
 	}
 
-	getAllToasts = () => {
-		return this.toasts
-	}
-
-	addToast = (toast) => {
-		if (this.toasts.length < 3) {
-			this.toasts.push(toast)
-		} else {
-			return
-		}
-	}
-
-	removeToast = (toastId) => {
-		this.toasts = this.toasts.filter(
-			(toast) => toast.id !== toastId,
-		)
-		renderToasts(ToastsList(this.toasts), this.container)
-	}
-
 	generateToast = (...toastOptions) => {
 		const [
 			toastType,
@@ -41,9 +22,16 @@ class ToastService {
 			titleColor,
 			backgroundColor,
 			toastAnimation,
+			toastAutoCloseIsOn,
+			toastAutoCloseTime,
 		] = toastOptions
 		const id = uuid()
-
+		let autoCloseTimeout = toastAutoCloseIsOn
+			? setTimeout(
+					() => this.removeToast(id),
+					toastAutoCloseTime || 3000,
+			  )
+			: undefined
 		this.toasts = updateToastsList(
 			this.toasts,
 			toastType,
@@ -53,8 +41,15 @@ class ToastService {
 			titleColor,
 			backgroundColor,
 			toastAnimation,
+			autoCloseTimeout,
 		)
+		renderToasts(ToastsList(this.toasts), this.container)
+	}
 
+	removeToast = (toastId) => {
+		this.toasts = this.toasts.filter(
+			(toast) => toast.id !== toastId,
+		)
 		renderToasts(ToastsList(this.toasts), this.container)
 	}
 }

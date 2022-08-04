@@ -4,8 +4,8 @@ import toast from '../ToastService'
 import PropTypes from 'prop-types'
 
 export const ToastCloseButton = ({ id, src, size }) => {
-	const deleteToast = (e) => {
-		toast.removeToast(e.target.id)
+	const deleteToast = (event) => {
+		toast.removeToast(event.target.id)
 	}
 
 	return (
@@ -19,4 +19,5 @@ ToastCloseButton.propTypes = {
 	id: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
 	size: PropTypes.object.isRequired,
+	autoCloseTimeout: PropTypes.func,
 }

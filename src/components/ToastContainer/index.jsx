@@ -5,12 +5,19 @@ import PropTypes from 'prop-types'
 
 export const ToastContainer = ({
 	toastPosition = 'top-right',
-}) => (
-	<ToastCard
-		id="container"
-		position={TOAST_POSITIONS[toastPosition]}
-	/>
-)
+}) => {
+	const side = toastPosition.includes('right')
+		? 'end'
+		: 'start'
+
+	return (
+		<ToastCard
+			id="container"
+			position={TOAST_POSITIONS[toastPosition]}
+			side={side}
+		/>
+	)
+}
 
 ToastContainer.propTypes = {
 	toastPosition: PropTypes.string.isRequired,

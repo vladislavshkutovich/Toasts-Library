@@ -52,6 +52,17 @@ export default {
 				type: 'radio',
 			},
 		},
+		toastAutoClose: {
+			control: {
+				type: 'boolean',
+			},
+		},
+		toastAutoCloseTime: {
+			defaultValue: 3000,
+			control: {
+				type: 'number',
+			},
+		},
 	},
 }
 
@@ -63,6 +74,8 @@ export const ToastStory = ({
 	titleColor,
 	backgroundColor,
 	toastAnimation,
+	toastAutoClose,
+	toastAutoCloseTime,
 }) => {
 	{
 		return TestingToastsComponent(
@@ -73,6 +86,8 @@ export const ToastStory = ({
 			titleColor,
 			backgroundColor,
 			toastAnimation,
+			toastAutoClose,
+			toastAutoCloseTime,
 		)
 	}
 

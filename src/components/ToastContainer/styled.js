@@ -9,7 +9,7 @@ export const ToastCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	align-items: flex-end;
+	align-items: flex-${({ side }) => side};
 	top: ${({ position }) =>
 		position.top || positionDefault(position)};
 	bottom: ${({ position }) =>

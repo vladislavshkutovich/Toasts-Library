@@ -12,6 +12,8 @@ export const TestingToastsComponent = (
 	titleColor,
 	backgroundColor,
 	toastAnimation,
+	toastAutoCloseIsOn,
+	toastAutoCloseTime,
 ) => {
 	const handleToast = () => {
 		toast.setContainer()
@@ -22,6 +24,8 @@ export const TestingToastsComponent = (
 			titleColor,
 			backgroundColor,
 			toastAnimation,
+			toastAutoCloseIsOn,
+			toastAutoCloseTime,
 		)
 	}
 
@@ -43,4 +47,6 @@ TestingToastsComponent.propTypes = {
 	titleColor: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	toastAnimation: PropTypes.string.isRequired,
+	toastAutoCloseIsOn: PropTypes.bool.isRequired,
+	toastAutoCloseTime: PropTypes.number.isRequired,
 }
