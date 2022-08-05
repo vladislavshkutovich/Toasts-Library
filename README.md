@@ -1,4 +1,4 @@
-# Training project Calculation-Task
+# Training project Toasts-Library
 
 ✅ Показать уведомление.  
 ✅ Возможность устанавливать положению уведомления.  
