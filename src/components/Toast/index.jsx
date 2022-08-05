@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { ToastLayout } from '../../layouts/ToastLayout'
 import { ToastIcon } from '../ToastIcon'
 import { ToastMessage } from '../ToastMessage'

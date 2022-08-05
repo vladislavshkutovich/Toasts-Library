@@ -1,4 +1,3 @@
-import { Toast } from '../components/Toast'
 import { TestingToastsComponent } from '../components/TestingToastsComponent'
 
 export default {
@@ -90,16 +89,4 @@ export const ToastStory = ({
 			toastAutoCloseTime,
 		)
 	}
-
-	// {
-	// 	return Toast(
-	// 		toastType,
-	// 		toastPosition,
-	// 		size,
-	// 		title,
-	// 		titleColor,
-	// 		backgroundColor,
-	// 		toastAnimation,
-	// 	)
-	// }
 }
