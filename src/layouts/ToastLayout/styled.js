@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 const fromTopAnimation = keyframes`
   from {
-    transform: translateY(-100%);
+    transform: translateY(-300%);
   }
   to {
     transform: translateY(0);
@@ -10,7 +10,7 @@ const fromTopAnimation = keyframes`
 `
 const fromBottomAnimation = keyframes`
   from {
-    transform: translateY(100%);
+    transform: translateY(300%);
   }
   to {
     transform: translateY(0);
@@ -34,5 +34,5 @@ export const StyledToastLayout = styled.div`
 			toastAnimation == 'from-top'
 				? fromTopAnimation
 				: fromBottomAnimation}
-		1s;
+		1.5s;
 `

@@ -31,6 +31,9 @@ export const updateToastsList = (
 			currentToastType = INFO_TOAST
 			break
 	}
+
+	if (toasts.length > 2) toasts.splice(0, toasts.length - 2)
+
 	return [
 		...toasts,
 		{
