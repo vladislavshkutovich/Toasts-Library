@@ -14,6 +14,8 @@ export const TestingToastsComponent = (
 	toastAnimation,
 	toastAutoCloseIsOn,
 	toastAutoCloseTime,
+	toastOffsetX,
+	toastOffsetY,
 ) => {
 	const handleToast = () => {
 		toast.setContainer()
@@ -34,7 +36,11 @@ export const TestingToastsComponent = (
 			<AddToastButton onClick={handleToast}>
 				Add Toast
 			</AddToastButton>
-			<ToastContainer toastPosition={toastPosition} />
+			<ToastContainer
+				toastPosition={toastPosition}
+				toastOffsetX={toastOffsetX}
+				toastOffsetY={toastOffsetY}
+			/>
 		</div>
 	)
 }
@@ -49,4 +55,6 @@ TestingToastsComponent.propTypes = {
 	toastAnimation: PropTypes.string.isRequired,
 	toastAutoCloseIsOn: PropTypes.bool.isRequired,
 	toastAutoCloseTime: PropTypes.number.isRequired,
+	toastOffsetX: PropTypes.number,
+	toastOffsetX: PropTypes.number,
 }

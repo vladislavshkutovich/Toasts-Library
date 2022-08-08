@@ -66,13 +66,13 @@ export default {
 		toastOffsetX: {
 			defaultValue: '0',
 			control: {
-				type: 'text',
+				type: 'number',
 			},
 		},
 		toastOffsetY: {
 			defaultValue: '0',
 			control: {
-				type: 'text',
+				type: 'number',
 			},
 		},
 	},
