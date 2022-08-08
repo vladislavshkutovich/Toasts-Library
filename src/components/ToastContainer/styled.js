@@ -18,6 +18,6 @@ export const ToastCard = styled.div`
 		position.left || positionDefault(position)};
 	right: ${({ position }) =>
 		position.rigth || positionDefault(position)};
-	margin: ${({ toastOffsetX }) => toastOffsetX}px
-		${({ toastOffsetY }) => toastOffsetY}px;
+	margin: ${({ toastOffsetX }) => toastOffsetX || 0}px
+		${({ toastOffsetY }) => toastOffsetY || 0}px;
 `
