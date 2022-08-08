@@ -25,6 +25,12 @@ export const ToastContainer = ({
 
 ToastContainer.propTypes = {
 	toastPosition: PropTypes.string.isRequired,
-	toastOffsetX: PropTypes.number,
-	toastOffsetY: PropTypes.number,
+	toastOffsetX: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+	]),
+	toastOffsetY: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+	]),
 }

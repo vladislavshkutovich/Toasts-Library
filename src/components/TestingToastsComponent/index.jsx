@@ -55,6 +55,12 @@ TestingToastsComponent.propTypes = {
 	toastAnimation: PropTypes.string.isRequired,
 	toastAutoCloseIsOn: PropTypes.bool.isRequired,
 	toastAutoCloseTime: PropTypes.number.isRequired,
-	toastOffsetX: PropTypes.number,
-	toastOffsetX: PropTypes.number,
+	toastOffsetX: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+	]),
+	toastOffsetY: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+	]),
 }
