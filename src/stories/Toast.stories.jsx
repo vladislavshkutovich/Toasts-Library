@@ -52,6 +52,7 @@ export default {
 			},
 		},
 		toastAutoClose: {
+			defaultValue: false,
 			control: {
 				type: 'boolean',
 			},
@@ -60,6 +61,18 @@ export default {
 			defaultValue: 3000,
 			control: {
 				type: 'number',
+			},
+		},
+		toastOffsetX: {
+			defaultValue: '0',
+			control: {
+				type: 'text',
+			},
+		},
+		toastOffsetY: {
+			defaultValue: '0',
+			control: {
+				type: 'text',
 			},
 		},
 	},
@@ -75,6 +88,8 @@ export const ToastStory = ({
 	toastAnimation,
 	toastAutoClose,
 	toastAutoCloseTime,
+	toastOffsetX,
+	toastOffsetY,
 }) => {
 	{
 		return TestingToastsComponent(
@@ -87,6 +102,8 @@ export const ToastStory = ({
 			toastAnimation,
 			toastAutoClose,
 			toastAutoCloseTime,
+			toastOffsetX,
+			toastOffsetY,
 		)
 	}
 }

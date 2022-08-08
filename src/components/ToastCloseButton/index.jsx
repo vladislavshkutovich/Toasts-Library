@@ -4,13 +4,13 @@ import toast from '../ToastService'
 import PropTypes from 'prop-types'
 
 export const ToastCloseButton = ({ id, src, size }) => {
-	const deleteToast = (event) => {
+	const handleDeleteToast = (event) => {
 		toast.removeToast(event.target.id)
 	}
 
 	return (
 		<StyledCloseButton size={size}>
-			<img src={src} id={id} onClick={deleteToast} />
+			<img src={src} id={id} onClick={handleDeleteToast} />
 		</StyledCloseButton>
 	)
 }
