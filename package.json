@@ -1,6 +1,6 @@
 {
   "name": "toasts-library-svs",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "private": false,
   "dependencies": {
     "@babel/core": "^7.18.9",
@@ -41,6 +41,10 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13"
   },
+	"main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "rollup -c",
     "sb": "start-storybook -p 6006",
