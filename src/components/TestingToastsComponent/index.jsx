@@ -1,8 +1,10 @@
 import React from 'react'
 import { ToastContainer } from '../ToastContainer'
 import { AddToastButton } from './styled'
-import toast from '../ToastService'
+import { ToastService } from '../ToastService'
 import PropTypes from 'prop-types'
+
+export const toast = new ToastService()
 
 export const TestingToastsComponent = (
 	toastType,
@@ -19,7 +21,7 @@ export const TestingToastsComponent = (
 ) => {
 	const handleToast = () => {
 		toast.setContainer()
-		toast.generateToast(
+		toast.addToast(
 			toastType,
 			size,
 			title,

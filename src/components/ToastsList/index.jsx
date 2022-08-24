@@ -2,21 +2,35 @@ import React from 'react'
 import { Toast } from '../Toast'
 
 export const ToastsList = (toasts) => {
-	return toasts.map((el) => {
-		return (
-			<Toast
-				key={el.id}
-				id={el.id}
-				size={el.size || 'medium'}
-				title={el.title || el.TITLE}
-				titleColor={el.titleColor || el.COLOR}
-				backgroundColor={
-					el.backgroundColor || el.BACKGROUND_COLOR
-				}
-				close={el.CLOSE}
-				icon={el.ICON}
-				toastAnimation={el.toastAnimation}
-			/>
-		)
-	})
+	return toasts.map(
+		({
+			id,
+			size,
+			title,
+			titleByDefault,
+			titleColor,
+			colorByDefault,
+			backgroundColor,
+			backgroundColorByDefault,
+			closeIconByDefault,
+			iconByDefault,
+			toastAnimation,
+		}) => {
+			return (
+				<Toast
+					key={id}
+					id={id}
+					size={size || 'medium'}
+					title={title || titleByDefault}
+					titleColor={titleColor || colorByDefault}
+					backgroundColor={
+						backgroundColor || backgroundColorByDefault
+					}
+					close={closeIconByDefault}
+					icon={iconByDefault}
+					toastAnimation={toastAnimation}
+				/>
+			)
+		},
+	)
 }

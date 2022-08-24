@@ -1,4 +1,4 @@
 import { ToastContainer } from './components/ToastContainer'
-import toast from './components/ToastService'
+import toast from './components/TestingToastsComponent'
 
 export { ToastContainer, toast }

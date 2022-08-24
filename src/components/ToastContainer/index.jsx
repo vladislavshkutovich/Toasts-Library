@@ -1,7 +1,7 @@
 import React from 'react'
 import { ToastCard } from './styled'
 import { TOAST_POSITIONS } from '../../constants'
-import PropTypes from 'prop-types'
+import { types } from './types'
 
 export const ToastContainer = ({
 	toastPosition = 'top-right',
@@ -23,14 +23,4 @@ export const ToastContainer = ({
 	)
 }
 
-ToastContainer.propTypes = {
-	toastPosition: PropTypes.string.isRequired,
-	toastOffsetX: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number,
-	]),
-	toastOffsetY: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number,
-	]),
-}
+ToastContainer.propTypes = types

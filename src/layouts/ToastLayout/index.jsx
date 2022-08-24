@@ -1,5 +1,5 @@
 import React from 'react'
-import toast from '../../components/ToastService'
+import { toast } from '../../components/TestingToastsComponent'
 import { StyledToastLayout } from './styled'
 
 export const ToastLayout = ({

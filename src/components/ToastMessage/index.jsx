@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledToastMessage } from './styled'
-import PropTypes from 'prop-types'
+import { types } from './types'
 
 export const ToastMessage = ({ color, title, size }) => (
 	<StyledToastMessage color={color} size={size}>
@@ -8,8 +8,4 @@ export const ToastMessage = ({ color, title, size }) => (
 	</StyledToastMessage>
 )
 
-ToastMessage.propTypes = {
-	color: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	size: PropTypes.object.isRequired,
-}
+ToastMessage.propTypes = types

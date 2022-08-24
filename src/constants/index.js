@@ -6,36 +6,36 @@ import closeIcon from '../assets/svg/cross.svg'
 import closeIconBlack from '../assets/svg/crossBlack.svg'
 
 export const INFO_TOAST = {
-	TITLE: 'Info Toast Example',
-	TYPE: 'info',
-	ICON: infoIcon,
-	CLOSE: closeIcon,
-	BACKGROUND_COLOR: '#9A40D3',
-	COLOR: '#FFFFFF',
+	titleByDefault: 'Info Toast Example',
+	typeByDefault: 'info',
+	iconByDefault: infoIcon,
+	closeIconByDefault: closeIcon,
+	backgroundColorByDefault: '#9A40D3',
+	colorByDefault: '#FFFFFF',
 }
 export const WARNING_TOAST = {
-	TITLE: 'Warning Toast Example',
-	TYPE: 'warning',
-	ICON: warningIcon,
-	CLOSE: closeIconBlack,
-	BACKGROUND_COLOR: '#F4E048',
-	COLOR: '#000000',
+	titleByDefault: 'Warning Toast Example',
+	typeByDefault: 'warning',
+	iconByDefault: warningIcon,
+	closeIconByDefault: closeIconBlack,
+	backgroundColorByDefault: '#F4E048',
+	colorByDefault: '#000000',
 }
 export const ERROR_TOAST = {
-	TITLE: 'Error Toast Example',
-	TYPE: 'error',
-	ICON: errorIcon,
-	CLOSE: closeIcon,
-	BACKGROUND_COLOR: '#E25837',
-	COLOR: '#FFFFFF',
+	titleByDefault: 'Error Toast Example',
+	typeByDefault: 'error',
+	iconByDefault: errorIcon,
+	closeIconByDefault: closeIcon,
+	backgroundColorByDefault: '#E25837',
+	colorByDefault: '#FFFFFF',
 }
 export const SUCCESS_TOAST = {
-	TITLE: 'Success Toast Example',
-	TYPE: 'success',
-	ICON: successIcon,
-	CLOSE: closeIcon,
-	BACKGROUND_COLOR: '#37E29A',
-	COLOR: '#FFFFFF',
+	titleByDefault: 'Success Toast Example',
+	typeByDefault: 'success',
+	iconByDefault: successIcon,
+	closeIconByDefault: closeIcon,
+	backgroundColorByDefault: '#37E29A',
+	colorByDefault: '#FFFFFF',
 }
 
 export const TOAST_POSITIONS = {

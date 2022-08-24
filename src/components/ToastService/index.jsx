@@ -5,7 +5,7 @@ import {
 } from '../../helpers'
 import { ToastsList } from '../ToastsList'
 
-class ToastService {
+export class ToastService {
 	constructor() {
 		this.toasts = []
 	}
@@ -14,7 +14,7 @@ class ToastService {
 		this.container = document.getElementById('container')
 	}
 
-	generateToast = (...toastOptions) => {
+	addToast = (...toastOptions) => {
 		const [
 			toastType,
 			size,
@@ -53,6 +53,3 @@ class ToastService {
 		renderToasts(ToastsList(this.toasts), this.container)
 	}
 }
-
-const toast = new ToastService()
-export default toast

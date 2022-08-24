@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyledCloseButton } from './styled'
-import toast from '../ToastService'
-import PropTypes from 'prop-types'
+import { StyledCloseButton, StyledSvgIcon } from './styled'
+import { toast } from '../TestingToastsComponent'
+import { types } from './types'
 
 export const ToastCloseButton = ({ id, src, size }) => {
 	const handleDeleteToast = (event) => {
@@ -9,15 +9,15 @@ export const ToastCloseButton = ({ id, src, size }) => {
 	}
 
 	return (
-		<StyledCloseButton size={size}>
-			<img src={src} id={id} onClick={handleDeleteToast} />
+		<StyledCloseButton>
+			<StyledSvgIcon
+				size={size}
+				src={src}
+				id={id}
+				onClick={handleDeleteToast}
+			/>
 		</StyledCloseButton>
 	)
 }
 
-ToastCloseButton.propTypes = {
-	id: PropTypes.string.isRequired,
-	src: PropTypes.string.isRequired,
-	size: PropTypes.object.isRequired,
-	autoCloseTimeout: PropTypes.func,
-}
+ToastCloseButton.propTypes = types

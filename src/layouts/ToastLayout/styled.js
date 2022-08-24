@@ -24,8 +24,9 @@ export const StyledToastLayout = styled.div`
 	width: ${({ size }) => size?.width || '350px'};
 	height: ${({ size }) => size?.height || '70px'};
 	padding: ${({ size }) => size?.padding || '15px'};
-	margin-bottom: 15px;
-	border-radius: 20px;
+	margin-bottom: ${({ theme }) => theme.margins[5]}px;
+	border-radius: ${({ theme }) =>
+		theme.borderRadiuses[6]}px;
 	background-color: ${({ backgroundColor }) =>
 		backgroundColor || '#9A40D3'};
 	font-family: Arial, Helvetica, sans-serif;
